@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
                 cookies["monster"]= "me like cookies"
                 session["user_id"]=@user["id"]
             #if they do login in
-            redirect_to "/companies"
+            redirect_to "/places"
             else
             redirect_to "/sessions/new"
             end
