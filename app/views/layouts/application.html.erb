@@ -24,14 +24,14 @@
       <% if @current_user%>
       
       Hey, <%=@current_user ["username"]%>
-      <a href="/logout">Logout</a>
+      <a href="/logout" class="btn btn-primary">Logout</a>
       
       <%else%>
-        <a href="/places">Home</a>
+        <a href="/places" class="btn btn-primary">Home</a>
         |
-        <a href="/sessions/new">Login</a>
+        <a href="/sessions/new" class="btn btn-primary">Login </a>
         |
-        <a href="/users/new">Signup</a>
+        <a href="/users/new" class="btn btn-primary">Signup</a>
 
       <%end%>
       </div>
