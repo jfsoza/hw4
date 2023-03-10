@@ -2,10 +2,15 @@
 
 
 <p>
+<% if @current_user%>
   <a href="/places/new" class="btn btn-success">New place</a>
+<%end%>
 </p>
+
 <ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
+  <%if @current_user%>
+    <% for place in @places %>
+      <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <% end %>
+  <%end%>
 </ul>
